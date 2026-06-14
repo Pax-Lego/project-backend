@@ -12,29 +12,51 @@ El backend está ubicado en `pax-saporis/` y es una API REST construida con:
 
 No hay frontend incluido en el repositorio actual.
 
-## 3. Skill (prompt) para revisión
-```
-Eres un revisor de código experto en backend Django REST Framework.
-Analiza este repositorio y genera un informe en formato markdown que incluya:
-- Arquitectura general y separación de responsabilidades.
-- Dependencias utilizadas y su propósito.
-- Calidad de diseño del backend.
-- Revisión de buenas prácticas de desarrollo.
-- Evaluación de pruebas automatizadas y evidencias de ejecución.
-- Reglas MUST y SHOULD de cumplimiento.
-- Problemas detectados y recomendaciones claras.
+## 3. Cómo ejecutar la skill
 
-Revisa específicamente:
-- `config/settings.py`
-- `apps/accounts/`
-- `apps/ingredients/`
-- `apps/recipes/`
-- `apps/plans/`
-- `apps/profiles/`
-- `apps/favorites/`
+El prompt de la skill está disponible en el archivo `Documentation/Project/skill_back_prompt.txt`.
+El profesor puede ejecutar la skill de cualquiera de las siguientes formas:
 
-Entrega la respuesta en markdown estructurado con secciones y conclusiones.
+- Opción A — Usar ChatGPT (interfaz web):
+	1. Abrir https://chat.openai.com/ y crear un nuevo chat.
+	2. Abrir `Documentation/Project/skill_back_prompt.txt`, copiar todo su contenido y pegarlo en el chat.
+	3. Pedir al asistente: "Genera el informe solicitado en formato markdown, con secciones, conclusiones y una sección llamada 'Evidencia de ejecución' que incluya los comandos usados y los resultados de las pruebas".
+
+- Opción B — Usar la API de OpenAI (ejemplo con Python):
+	1. Exportar la variable de entorno con la clave de API: `OPENAI_API_KEY`.
+	2. Instalar el cliente si es necesario: `pip install openai`.
+	3. Ejecutar el siguiente comando (ejemplo):
+
+```bash
+# Linux / macOS
+export OPENAI_API_KEY="tu_api_key"
+
+# PowerShell (Windows)
+# $env:OPENAI_API_KEY = 'tu_api_key'
+
+python - <<'PY'
+import os
+from openai import OpenAI
+
+client = OpenAI(api_key=os.environ.get('OPENAI_API_KEY'))
+prompt = open('Documentation/Project/skill_back_prompt.txt', encoding='utf-8').read()
+resp = client.responses.create(model='MODEL_NAME', input=prompt)
+print(resp.output_text)
+PY
 ```
+
+Nota: Reemplazar `'MODEL_NAME'` por el modelo disponible en su entorno institucional.
+
+- Opción C — Ejecutar con un script local (opcional):
+	- Si desea, puedo añadir `scripts/run_skill.py` que lea `Documentation/Project/skill_back_prompt.txt` y llame a la API automáticamente.
+
+Sugerencia para la ejecución: solicitar al asistente que incluya explícitamente una sección **Evidencia de ejecución** donde pegue la salida del comando:
+
+```bash
+python manage.py test --verbosity 2
+```
+
+y resuma los errores o confirme que todas las pruebas pasaron.
 
 ## 4. Arquitectura del backend
 
