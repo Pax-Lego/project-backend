@@ -1,0 +1,152 @@
+[
+  {
+    "model": "ingredients.ingredient",
+    "pk": 1,
+    "fields": {
+      "name": "Pechuga de Pollo",
+      "is_default": true,
+      "calories_per_100g": 165,
+      "protein_g": 31.0,
+      "carbs_g": 0,
+      "fat_g": 3.6,
+      "user": null,
+      "created_at": "2026-06-08T00:00:00Z",
+      "updated_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 2,
+    "fields": {
+      "name": "Arroz Blanco",
+      "is_default": true,
+      "calories_per_100g": 130,
+      "protein_g": 2.7,
+      "carbs_g": 28.0,
+      "fat_g": 0.3,
+      "user": null,
+      "created_at": "2026-06-08T00:00:00Z",
+      "updated_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 3,
+    "fields": {
+      "name": "Brócoli",
+      "is_default": true,
+      "calories_per_100g": 34,
+      "protein_g": 2.8,
+      "carbs_g": 7.0,
+      "fat_g": 0.4,
+      "user": null,
+      "created_at": "2026-06-08T00:00:00Z",
+      "updated_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 4,
+    "fields": {
+      "name": "Huevo",
+      "is_default": true,
+      "calories_per_100g": 155,
+      "protein_g": 13.0,
+      "carbs_g": 1.1,
+      "fat_g": 11.0,
+      "user": null,
+      "created_at": "2026-06-08T00:00:00Z",
+      "updated_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 5,
+    "fields": {
+      "name": "Salmón",
+      "is_default": true,
+      "calories_per_100g": 208,
+      "protein_g": 20.0,
+      "carbs_g": 0,
+      "fat_g": 13.0,
+      "user": null,
+      "created_at": "2026-06-08T00:00:00Z",
+      "updated_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 6,
+    "fields": {
+      "name": "Manzana",
+      "is_default": true,
+      "calories_per_100g": 52,
+      "protein_g": 0.3,
+      "carbs_g": 13.8,
+      "fat_g": 0.2,
+      "user": null,
+      "created_at": "2026-06-08T00:00:00Z",
+      "updated_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 7,
+    "fields": {
+      "name": "Plátano",
+      "is_default": true,
+      "calories_per_100g": 89,
+      "protein_g": 1.1,
+      "carbs_g": 23.0,
+      "fat_g": 0.3,
+      "user": null,
+      "created_at": "2026-06-08T00:00:00Z",
+      "updated_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 8,
+    "fields": {
+      "name": "Pan Integral",
+      "is_default": true,
+      "calories_per_100g": 247,
+      "protein_g": 9.0,
+      "carbs_g": 43.0,
+      "fat_g": 3.3,
+      "user": null,
+      "created_at": "2026-06-08T00:00:00Z",
+      "updated_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 9,
+    "fields": {
+      "name": "Leche Descremada",
+      "is_default": true,
+      "calories_per_100g": 35,
+      "protein_g": 3.4,
+      "carbs_g": 4.8,
+      "fat_g": 0.1,
+      "user": null,
+      "created_at": "2026-06-08T00:00:00Z",
+      "updated_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 10,
+    "fields": {
+      "name": "Lentejas",
+      "is_default": true,
+      "calories_per_100g": 116,
+      "protein_g": 9.0,
+      "carbs_g": 20.0,
+      "fat_g": 0.4,
+      "user": null,
+      "created_at": "2026-06-08T00:00:00Z",
+      "updated_at": "2026-06-08T00:00:00Z"
+    }
+  }
+]

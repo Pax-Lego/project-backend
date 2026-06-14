@@ -1,0 +1,108 @@
+[
+  {
+    "model": "recipes.recipe",
+    "pk": 1,
+    "fields": {
+      "name": "Pollo con Arroz y Brócoli",
+      "description": "Comida balanceada con proteína, carbohidratos y verduras",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-06-08T00:00:00Z",
+      "updated_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 2,
+    "fields": {
+      "name": "Salmón con Vegetales",
+      "description": "Rico en ácidos omega-3 y nutrientes",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-06-08T00:00:00Z",
+      "updated_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 3,
+    "fields": {
+      "name": "Desayuno Proteico",
+      "description": "Desayuno alto en proteína con huevo y pan integral",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-06-08T00:00:00Z",
+      "updated_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 1,
+    "fields": {
+      "recipe": 1,
+      "ingredient": 1,
+      "quantity_g": 150,
+      "created_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 2,
+    "fields": {
+      "recipe": 1,
+      "ingredient": 2,
+      "quantity_g": 150,
+      "created_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 3,
+    "fields": {
+      "recipe": 1,
+      "ingredient": 3,
+      "quantity_g": 100,
+      "created_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 4,
+    "fields": {
+      "recipe": 2,
+      "ingredient": 5,
+      "quantity_g": 180,
+      "created_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 5,
+    "fields": {
+      "recipe": 2,
+      "ingredient": 3,
+      "quantity_g": 150,
+      "created_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 6,
+    "fields": {
+      "recipe": 3,
+      "ingredient": 4,
+      "quantity_g": 100,
+      "created_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 7,
+    "fields": {
+      "recipe": 3,
+      "ingredient": 8,
+      "quantity_g": 40,
+      "created_at": "2026-06-08T00:00:00Z"
+    }
+  }
+]
