@@ -1,6 +1,6 @@
-# Calorie Tracker - Backend
+# Pax-Saporis - Backend
 
-Backend para aplicación de tracking de calorías construido con Django, DRF y PostgreSQL.
+Backend construido con Django, DRF y PostgreSQL.
 
 ## Descripción
 
