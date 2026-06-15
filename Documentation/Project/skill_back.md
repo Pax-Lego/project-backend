@@ -140,24 +140,27 @@ cd pax-saporis
 python manage.py test --verbosity 2
 ```
 
-### Ejemplo de evidencia esperada
-- Tests ejecutados: 53
-- Tests aprobados: 53
-- Fallos: 0
-- Errores: 0
+### 9.1 Resultados
+- Total de tests detectados: 53
+- Se ejecutaron tests de `accounts`, `ingredients`, `recipes`, `plans` y otras apps.
+- Se identificaron errores específicos en las pruebas de `ingredients` y `plans`.
 
-> El profesor deberá ver un resultado verde en la evidencia del informe generado por la skill.
+### 9.2 Fallas detectadas
+- `apps/ingredients/tests.py`: fallos debidos a asignar un `MagicMock` a `RecipeIngredient.ingredient` en lugar de una instancia `Ingredient` válida.
+- `apps/plans/tests.py`: fallos asociados a cálculos de macros y casos sin receta.
+
+### 9.3 Interpretación
+El repositorio muestra un diseño consistente y cubre varias áreas importantes, pero la ejecución de pruebas revela que algunos casos unitarios deben corregirse para que la entrega sea completamente verde.
 
 ## 10. Resultados y recomendaciones
-### 10.1 Resultados esperados
-- Backend con arquitectura clara y modular.
-- Prácticas de desarrollo aplicadas en Django/DRF.
-- Documentación de dependencias y configuración.
-- Revisión completa con reglas MUST y SHOULD.
-- Evidencia de ejecución de pruebas.
+### 10.1 Resultados
+- El backend está bien estructurado y sigue un patrón modular.
+- La arquitectura de Django REST Framework está bien aplicada.
+- Existen pruebas automatizadas, lo cual es positivo.
+- Hay errores de pruebas que deben corregirse antes de aprobar la entrega.
 
 ### 10.2 Recomendaciones
-1. Mantener las apps separadas por dominio.
-2. Dejar la validación en serializers.
-3. Documentar cada endpoint y su propósito.
-4. Ejecutar pruebas automáticamente y registrar resultados.
+1. Corregir tests que utilizan `MagicMock` en campos `ForeignKey` y reemplazarlos por instancias reales.
+2. Verificar los cálculos de macros en `apps/ingredients` y `apps/plans` para asegurar resultados numéricos correctos.
+3. Mejorar la documentación de endpoints en el README o con OpenAPI.
+4. Mantener la separación de responsabilidades y la validación centralizada en serializers.
