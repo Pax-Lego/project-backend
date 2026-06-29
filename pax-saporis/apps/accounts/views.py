@@ -5,7 +5,14 @@ from rest_framework import status
 from django.contrib.auth import authenticate, login, logout
 from apps.accounts.models import CustomUser
 from apps.accounts.serializers import UserSerializer, RegisterSerializer, LoginSerializer
+from django.views.decorators.csrf import ensure_csrf_cookie
+from django.http import JsonResponse
 
+@ensure_csrf_cookie
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def get_csrf_token(request):
+    return JsonResponse({'detail': 'CSRF cookie set'})
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
