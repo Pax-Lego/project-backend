@@ -1,12 +1,13 @@
 from rest_framework import serializers
+
 from apps.profiles.models import UserProfile, WeightEntry
 
 
 class WeightEntrySerializer(serializers.ModelSerializer):
     class Meta:
         model = WeightEntry
-        fields = ['id', 'weight_kg', 'date', 'notes', 'created_at']
-        read_only_fields = ['id', 'created_at']
+        fields = ["id", "weight_kg", "date", "notes", "created_at"]
+        read_only_fields = ["id", "created_at"]
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
@@ -20,18 +21,37 @@ class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
         fields = [
-            'id', 'sex', 'date_of_birth', 'age', 'height_cm',
-            'activity_level', 'goal', 'dietary_restrictions',
-            'current_weight', 'tdee', 'recommended_calories', 'recommended_macros',
-            'weight_history', 'created_at', 'updated_at'
+            "id",
+            "sex",
+            "date_of_birth",
+            "age",
+            "height_cm",
+            "activity_level",
+            "goal",
+            "dietary_restrictions",
+            "current_weight",
+            "tdee",
+            "recommended_calories",
+            "recommended_macros",
+            "weight_history",
+            "created_at",
+            "updated_at",
         ]
         read_only_fields = [
-            'id', 'created_at', 'updated_at',
-            'age', 'current_weight', 'tdee', 'recommended_calories', 'recommended_macros'
+            "id",
+            "created_at",
+            "updated_at",
+            "age",
+            "current_weight",
+            "tdee",
+            "recommended_calories",
+            "recommended_macros",
         ]
 
     def validate_dietary_restrictions(self, value):
-        valid = [r[0] for r in UserProfile.DietaryRestriction.choices]
+        valid = [
+            restriction[0] for restriction in UserProfile.DietaryRestriction.choices
+        ]
         for item in value:
             if item not in valid:
                 raise serializers.ValidationError(

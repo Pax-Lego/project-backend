@@ -1,11 +1,11 @@
 from rest_framework import serializers
+
 from apps.recipes.models import Recipe, RecipeIngredient
-from apps.ingredients.models import Ingredient
 
 
 class RecipeIngredientSerializer(serializers.ModelSerializer):
-    ingredient_name = serializers.CharField(source='ingredient.name', read_only=True)
-    ingredient_id = serializers.IntegerField(source='ingredient.id', read_only=True)
+    ingredient_name = serializers.CharField(source="ingredient.name", read_only=True)
+    ingredient_id = serializers.IntegerField(source="ingredient.id", read_only=True)
     calories = serializers.FloatField(read_only=True)
     protein = serializers.FloatField(read_only=True)
     carbs = serializers.FloatField(read_only=True)
@@ -13,8 +13,18 @@ class RecipeIngredientSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = RecipeIngredient
-        fields = ['id', 'ingredient_id', 'ingredient_name', 'quantity_g', 'calories', 'protein', 'carbs', 'fat', 'created_at']
-        read_only_fields = ['id', 'created_at', 'calories', 'protein', 'carbs', 'fat']
+        fields = [
+            "id",
+            "ingredient_id",
+            "ingredient_name",
+            "quantity_g",
+            "calories",
+            "protein",
+            "carbs",
+            "fat",
+            "created_at",
+        ]
+        read_only_fields = ["id", "created_at", "calories", "protein", "carbs", "fat"]
 
 
 class RecipeSerializer(serializers.ModelSerializer):
@@ -27,12 +37,28 @@ class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipe
         fields = [
-            'id', 'name', 'description', 'is_default', 'ingredients_rel',
-            'total_calories', 'total_protein', 'total_carbs', 'total_fat',
-            'created_at', 'updated_at'
+            "id",
+            "name",
+            "description",
+            "is_default",
+            "ingredients_rel",
+            "total_calories",
+            "total_protein",
+            "total_carbs",
+            "total_fat",
+            "created_at",
+            "updated_at",
         ]
-        read_only_fields = ['id', 'created_at', 'updated_at', 'is_default',
-                            'total_calories', 'total_protein', 'total_carbs', 'total_fat']
+        read_only_fields = [
+            "id",
+            "created_at",
+            "updated_at",
+            "is_default",
+            "total_calories",
+            "total_protein",
+            "total_carbs",
+            "total_fat",
+        ]
 
 
 class RecipeDetailSerializer(serializers.ModelSerializer):
@@ -44,5 +70,26 @@ class RecipeDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Recipe
-        fields = ['id', 'name', 'description', 'is_default', 'ingredients_rel', 'total_calories', 'total_protein', 'total_carbs', 'total_fat', 'created_at', 'updated_at']
-        read_only_fields = ['id', 'created_at', 'updated_at', 'is_default', 'total_calories', 'total_protein', 'total_carbs', 'total_fat']
+        fields = [
+            "id",
+            "name",
+            "description",
+            "is_default",
+            "ingredients_rel",
+            "total_calories",
+            "total_protein",
+            "total_carbs",
+            "total_fat",
+            "created_at",
+            "updated_at",
+        ]
+        read_only_fields = [
+            "id",
+            "created_at",
+            "updated_at",
+            "is_default",
+            "total_calories",
+            "total_protein",
+            "total_carbs",
+            "total_fat",
+        ]

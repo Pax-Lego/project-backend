@@ -1,8 +1,9 @@
-from rest_framework import viewsets, status
+from django.db.models import Q
+from rest_framework import status, viewsets
+from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from rest_framework.decorators import action
-from django.db.models import Q
+
 from apps.ingredients.models import Ingredient
 from apps.ingredients.serializers import IngredientSerializer
 
@@ -20,21 +21,27 @@ class IngredientViewSet(viewsets.ModelViewSet):
     def perform_update(self, serializer):
         ingredient = self.get_object()
         if ingredient.is_default:
-            return Response({'error': 'No puedes editar ingredientes predefinidos'}, status=status.HTTP_403_FORBIDDEN)
+            return Response(
+                {"error": "No puedes editar ingredientes predefinidos"},
+                status=status.HTTP_403_FORBIDDEN,
+            )
         serializer.save()
 
     def perform_destroy(self, instance):
         if instance.is_default:
-            return Response({'error': 'No puedes eliminar ingredientes predefinidos'}, status=status.HTTP_403_FORBIDDEN)
+            return Response(
+                {"error": "No puedes eliminar ingredientes predefinidos"},
+                status=status.HTTP_403_FORBIDDEN,
+            )
         instance.delete()
 
-    @action(detail=False, methods=['get'])
+    @action(detail=False, methods=["get"])
     def defaults(self, request):
         ingredients = Ingredient.objects.filter(is_default=True)
         serializer = self.get_serializer(ingredients, many=True)
         return Response(serializer.data)
 
-    @action(detail=False, methods=['get'])
+    @action(detail=False, methods=["get"])
     def mine(self, request):
         ingredients = Ingredient.objects.filter(user=request.user)
         serializer = self.get_serializer(ingredients, many=True)

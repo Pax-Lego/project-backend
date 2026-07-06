@@ -1,10 +1,17 @@
 from django.db import models
+
 from apps.accounts.models import CustomUser
 from apps.ingredients.models import Ingredient
 
 
 class Recipe(models.Model):
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='recipes', null=True, blank=True)
+    user = models.ForeignKey(
+        CustomUser,
+        on_delete=models.CASCADE,
+        related_name="recipes",
+        null=True,
+        blank=True,
+    )
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
     is_default = models.BooleanField(default=False)
@@ -12,37 +19,39 @@ class Recipe(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ['name']
-        unique_together = ('user', 'name')
+        ordering = ["name"]
+        unique_together = ("user", "name")
 
     def __str__(self):
         return self.name
 
     @property
     def total_calories(self):
-        return sum(ri.calories for ri in self.ingredients_rel.all())
+        return sum(ingredient.calories for ingredient in self.ingredients_rel.all())
 
     @property
     def total_protein(self):
-        return sum(ri.protein for ri in self.ingredients_rel.all())
+        return sum(ingredient.protein for ingredient in self.ingredients_rel.all())
 
     @property
     def total_carbs(self):
-        return sum(ri.carbs for ri in self.ingredients_rel.all())
+        return sum(ingredient.carbs for ingredient in self.ingredients_rel.all())
 
     @property
     def total_fat(self):
-        return sum(ri.fat for ri in self.ingredients_rel.all())
+        return sum(ingredient.fat for ingredient in self.ingredients_rel.all())
 
 
 class RecipeIngredient(models.Model):
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name='ingredients_rel')
+    recipe = models.ForeignKey(
+        Recipe, on_delete=models.CASCADE, related_name="ingredients_rel"
+    )
     ingredient = models.ForeignKey(Ingredient, on_delete=models.CASCADE)
     quantity_g = models.FloatField(help_text="Cantidad en gramos")
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        unique_together = ('recipe', 'ingredient')
+        unique_together = ("recipe", "ingredient")
 
     def __str__(self):
         return f"{self.ingredient.name} - {self.quantity_g}g"

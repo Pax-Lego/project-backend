@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('profiles', '0001_initial'),
+        ("profiles", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='userprofile',
-            name='dietary_restrictions',
+            model_name="userprofile",
+            name="dietary_restrictions",
             field=models.JSONField(blank=True, default=list, null=True),
         ),
     ]

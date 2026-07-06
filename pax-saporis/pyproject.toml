@@ -1,0 +1,32 @@
+[project]
+name = "pax-saporis"
+version = "0.1.0"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+# Selección de reglas
+select = [
+    "E",      # pycodestyle errors
+    "F",      # pyflakes
+    "I",      # isort
+    "B",      # bugbear
+    "C4",     # comprehensions
+    "DJ",     # Django specific
+    "UP",     # pyupgrade
+    "RUF",    # Ruff specific
+]
+
+ignore = ["E501"]  # Black se encarga del largo de línea
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"

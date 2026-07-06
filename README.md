@@ -6,6 +6,7 @@ Backend para aplicación de tracking de calorías construido con Django, DRF y P
 
 El backend proporciona una API REST para gestionar:
 - **Autenticación**: Registro, login, logout de usuarios
+- **CSRF Protection**: Protección contra ataques de Cross-Site Request Forgery mediante tokens CSRF que se validan en todas las operaciones que cambian estado (POST, PUT, DELETE)
 - **Ingredientes**: CRUD de ingredientes personalizados + base de ingredientes default
 - **Recetas**: CRUD de recetas personalizadas + recetas default con cálculo automático de nutricionales
 - **Planes y perfiles**: Gestión de planes alimenticios, perfiles de usuario y favoritos
