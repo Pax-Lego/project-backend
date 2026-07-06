@@ -148,5 +148,605 @@
       "created_at": "2026-06-08T00:00:00Z",
       "updated_at": "2026-06-08T00:00:00Z"
     }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 11,
+    "fields": {
+      "name": "Avena en Hojuelas",
+      "is_default": true,
+      "calories_per_100g": 389,
+      "protein_g": 16.9,
+      "carbs_g": 66.3,
+      "fat_g": 6.9,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 12,
+    "fields": {
+      "name": "Quinoa",
+      "is_default": true,
+      "calories_per_100g": 120,
+      "protein_g": 4.4,
+      "carbs_g": 21.3,
+      "fat_g": 1.9,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 13,
+    "fields": {
+      "name": "Papa",
+      "is_default": true,
+      "calories_per_100g": 77,
+      "protein_g": 2.0,
+      "carbs_g": 17.0,
+      "fat_g": 0.1,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 14,
+    "fields": {
+      "name": "Camote",
+      "is_default": true,
+      "calories_per_100g": 86,
+      "protein_g": 1.6,
+      "carbs_g": 20.1,
+      "fat_g": 0.1,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 15,
+    "fields": {
+      "name": "Pasta Integral",
+      "is_default": true,
+      "calories_per_100g": 124,
+      "protein_g": 5.3,
+      "carbs_g": 25.0,
+      "fat_g": 1.1,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 16,
+    "fields": {
+      "name": "Carne de Res Magra",
+      "is_default": true,
+      "calories_per_100g": 187,
+      "protein_g": 26.0,
+      "carbs_g": 0,
+      "fat_g": 8.7,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 17,
+    "fields": {
+      "name": "Lomo de Cerdo",
+      "is_default": true,
+      "calories_per_100g": 143,
+      "protein_g": 26.0,
+      "carbs_g": 0,
+      "fat_g": 3.5,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 18,
+    "fields": {
+      "name": "Pechuga de Pavo",
+      "is_default": true,
+      "calories_per_100g": 135,
+      "protein_g": 30.0,
+      "carbs_g": 0,
+      "fat_g": 1.0,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 19,
+    "fields": {
+      "name": "Atún en Agua",
+      "is_default": true,
+      "calories_per_100g": 116,
+      "protein_g": 25.5,
+      "carbs_g": 0,
+      "fat_g": 1.0,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 20,
+    "fields": {
+      "name": "Camarones",
+      "is_default": true,
+      "calories_per_100g": 99,
+      "protein_g": 24.0,
+      "carbs_g": 0.2,
+      "fat_g": 0.3,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 21,
+    "fields": {
+      "name": "Tofu Firme",
+      "is_default": true,
+      "calories_per_100g": 76,
+      "protein_g": 8.0,
+      "carbs_g": 1.9,
+      "fat_g": 4.8,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 22,
+    "fields": {
+      "name": "Espinaca",
+      "is_default": true,
+      "calories_per_100g": 23,
+      "protein_g": 2.9,
+      "carbs_g": 3.6,
+      "fat_g": 0.4,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 23,
+    "fields": {
+      "name": "Zanahoria",
+      "is_default": true,
+      "calories_per_100g": 41,
+      "protein_g": 0.9,
+      "carbs_g": 9.6,
+      "fat_g": 0.2,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 24,
+    "fields": {
+      "name": "Tomate",
+      "is_default": true,
+      "calories_per_100g": 18,
+      "protein_g": 0.9,
+      "carbs_g": 3.9,
+      "fat_g": 0.2,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 25,
+    "fields": {
+      "name": "Pepino",
+      "is_default": true,
+      "calories_per_100g": 15,
+      "protein_g": 0.7,
+      "carbs_g": 3.6,
+      "fat_g": 0.1,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 26,
+    "fields": {
+      "name": "Pimiento Rojo",
+      "is_default": true,
+      "calories_per_100g": 31,
+      "protein_g": 1.0,
+      "carbs_g": 6.0,
+      "fat_g": 0.3,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 27,
+    "fields": {
+      "name": "Coliflor",
+      "is_default": true,
+      "calories_per_100g": 25,
+      "protein_g": 1.9,
+      "carbs_g": 5.0,
+      "fat_g": 0.3,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 28,
+    "fields": {
+      "name": "Calabacín",
+      "is_default": true,
+      "calories_per_100g": 17,
+      "protein_g": 1.2,
+      "carbs_g": 3.1,
+      "fat_g": 0.3,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 29,
+    "fields": {
+      "name": "Fresa",
+      "is_default": true,
+      "calories_per_100g": 32,
+      "protein_g": 0.7,
+      "carbs_g": 7.7,
+      "fat_g": 0.3,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 30,
+    "fields": {
+      "name": "Naranja",
+      "is_default": true,
+      "calories_per_100g": 47,
+      "protein_g": 0.9,
+      "carbs_g": 11.8,
+      "fat_g": 0.1,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 31,
+    "fields": {
+      "name": "Uva",
+      "is_default": true,
+      "calories_per_100g": 69,
+      "protein_g": 0.7,
+      "carbs_g": 18.0,
+      "fat_g": 0.2,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 32,
+    "fields": {
+      "name": "Sandía",
+      "is_default": true,
+      "calories_per_100g": 30,
+      "protein_g": 0.6,
+      "carbs_g": 7.6,
+      "fat_g": 0.2,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 33,
+    "fields": {
+      "name": "Piña",
+      "is_default": true,
+      "calories_per_100g": 50,
+      "protein_g": 0.5,
+      "carbs_g": 13.1,
+      "fat_g": 0.1,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 34,
+    "fields": {
+      "name": "Aguacate",
+      "is_default": true,
+      "calories_per_100g": 160,
+      "protein_g": 2.0,
+      "carbs_g": 8.5,
+      "fat_g": 14.7,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 35,
+    "fields": {
+      "name": "Yogur Griego Natural",
+      "is_default": true,
+      "calories_per_100g": 59,
+      "protein_g": 10.0,
+      "carbs_g": 3.6,
+      "fat_g": 0.4,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 36,
+    "fields": {
+      "name": "Queso Cottage",
+      "is_default": true,
+      "calories_per_100g": 98,
+      "protein_g": 11.1,
+      "carbs_g": 3.4,
+      "fat_g": 4.3,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 37,
+    "fields": {
+      "name": "Leche de Almendra",
+      "is_default": true,
+      "calories_per_100g": 17,
+      "protein_g": 0.6,
+      "carbs_g": 0.6,
+      "fat_g": 1.5,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 38,
+    "fields": {
+      "name": "Leche de Coco",
+      "is_default": true,
+      "calories_per_100g": 230,
+      "protein_g": 2.3,
+      "carbs_g": 6.0,
+      "fat_g": 24.0,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 39,
+    "fields": {
+      "name": "Garbanzos",
+      "is_default": true,
+      "calories_per_100g": 164,
+      "protein_g": 8.9,
+      "carbs_g": 27.4,
+      "fat_g": 2.6,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 40,
+    "fields": {
+      "name": "Frijoles Negros",
+      "is_default": true,
+      "calories_per_100g": 132,
+      "protein_g": 8.9,
+      "carbs_g": 23.7,
+      "fat_g": 0.5,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 41,
+    "fields": {
+      "name": "Edamame",
+      "is_default": true,
+      "calories_per_100g": 121,
+      "protein_g": 11.9,
+      "carbs_g": 8.9,
+      "fat_g": 5.2,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 42,
+    "fields": {
+      "name": "Almendras",
+      "is_default": true,
+      "calories_per_100g": 579,
+      "protein_g": 21.2,
+      "carbs_g": 21.6,
+      "fat_g": 49.9,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 43,
+    "fields": {
+      "name": "Nueces",
+      "is_default": true,
+      "calories_per_100g": 654,
+      "protein_g": 15.2,
+      "carbs_g": 13.7,
+      "fat_g": 65.2,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 44,
+    "fields": {
+      "name": "Semillas de Chía",
+      "is_default": true,
+      "calories_per_100g": 486,
+      "protein_g": 16.5,
+      "carbs_g": 42.1,
+      "fat_g": 30.7,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 45,
+    "fields": {
+      "name": "Aceite de Oliva",
+      "is_default": true,
+      "calories_per_100g": 884,
+      "protein_g": 0,
+      "carbs_g": 0,
+      "fat_g": 100.0,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 46,
+    "fields": {
+      "name": "Mantequilla de Maní Natural",
+      "is_default": true,
+      "calories_per_100g": 588,
+      "protein_g": 25.0,
+      "carbs_g": 20.0,
+      "fat_g": 50.0,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 47,
+    "fields": {
+      "name": "Miel de Abeja",
+      "is_default": true,
+      "calories_per_100g": 304,
+      "protein_g": 0.3,
+      "carbs_g": 82.4,
+      "fat_g": 0,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 48,
+    "fields": {
+      "name": "Harina de Almendra",
+      "is_default": true,
+      "calories_per_100g": 571,
+      "protein_g": 21.0,
+      "carbs_g": 20.0,
+      "fat_g": 50.0,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 49,
+    "fields": {
+      "name": "Arroz Integral",
+      "is_default": true,
+      "calories_per_100g": 111,
+      "protein_g": 2.6,
+      "carbs_g": 23.0,
+      "fat_g": 0.9,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "ingredients.ingredient",
+    "pk": 50,
+    "fields": {
+      "name": "Pan sin Gluten",
+      "is_default": true,
+      "calories_per_100g": 260,
+      "protein_g": 3.5,
+      "carbs_g": 52.0,
+      "fat_g": 3.0,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
   }
 ]

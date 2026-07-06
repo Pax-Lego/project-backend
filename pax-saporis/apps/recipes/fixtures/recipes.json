@@ -1,5 +1,5 @@
 [
-  {
+    {
     "model": "recipes.recipe",
     "pk": 1,
     "fields": {
@@ -33,6 +33,186 @@
       "user": null,
       "created_at": "2026-06-08T00:00:00Z",
       "updated_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 4,
+    "fields": {
+      "name": "Avena con Plátano y Miel",
+      "description": "Desayuno energético, alto en fibra y carbohidratos de liberación lenta",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 5,
+    "fields": {
+      "name": "Tostadas de Aguacate con Huevo",
+      "description": "Desayuno completo con grasas saludables y proteína",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 6,
+    "fields": {
+      "name": "Batido Proteico de Almendra y Plátano",
+      "description": "Desayuno o merienda ligera, apto para intolerantes a la lactosa y veganos",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 7,
+    "fields": {
+      "name": "Ensalada de Quinoa con Garbanzos",
+      "description": "Almuerzo vegano y sin gluten, rico en proteína vegetal y fibra",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 8,
+    "fields": {
+      "name": "Lentejas Guisadas con Zanahoria",
+      "description": "Almuerzo vegano y sin gluten, alto en fibra y hierro",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 9,
+    "fields": {
+      "name": "Arroz Integral con Pollo y Espinaca",
+      "description": "Almuerzo balanceado con carbohidratos complejos y proteína magra",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 10,
+    "fields": {
+      "name": "Pasta Integral con Atún y Tomate",
+      "description": "Almuerzo o cena rápida, rica en proteína y carbohidratos integrales",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 11,
+    "fields": {
+      "name": "Camarones Salteados con Calabacín",
+      "description": "Cena baja en carbohidratos y sin gluten, ligera y rica en proteína",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 12,
+    "fields": {
+      "name": "Salmón al Horno con Camote",
+      "description": "Cena rica en omega-3 y carbohidratos complejos, sin gluten",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 13,
+    "fields": {
+      "name": "Tofu Salteado con Vegetales",
+      "description": "Cena vegana y sin gluten, alta en proteína vegetal",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 14,
+    "fields": {
+      "name": "Carne de Res con Papa y Espinaca",
+      "description": "Cena tradicional balanceada, rica en hierro y proteína",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 15,
+    "fields": {
+      "name": "Yogur Griego con Fresas y Almendras",
+      "description": "Merienda sin gluten, alta en proteína y antioxidantes",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 16,
+    "fields": {
+      "name": "Batido de Plátano y Mantequilla de Maní",
+      "description": "Merienda energética, ideal después de entrenar",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 17,
+    "fields": {
+      "name": "Hummus de Garbanzos con Vegetales",
+      "description": "Aperitivo vegano y sin gluten, rico en fibra y proteína vegetal",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipe",
+    "pk": 18,
+    "fields": {
+      "name": "Mix de Frutos Secos y Frutas",
+      "description": "Aperitivo vegano y sin gluten, práctico para llevar",
+      "is_default": true,
+      "user": null,
+      "created_at": "2026-07-06T00:00:00Z",
+      "updated_at": "2026-07-06T00:00:00Z"
     }
   },
   {
@@ -103,6 +283,506 @@
       "ingredient": 8,
       "quantity_g": 40,
       "created_at": "2026-06-08T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 8,
+    "fields": {
+      "recipe": 4,
+      "ingredient": 11,
+      "quantity_g": 60,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 9,
+    "fields": {
+      "recipe": 4,
+      "ingredient": 7,
+      "quantity_g": 100,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 10,
+    "fields": {
+      "recipe": 4,
+      "ingredient": 47,
+      "quantity_g": 15,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 11,
+    "fields": {
+      "recipe": 5,
+      "ingredient": 8,
+      "quantity_g": 60,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 12,
+    "fields": {
+      "recipe": 5,
+      "ingredient": 34,
+      "quantity_g": 80,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 13,
+    "fields": {
+      "recipe": 5,
+      "ingredient": 4,
+      "quantity_g": 100,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 14,
+    "fields": {
+      "recipe": 6,
+      "ingredient": 37,
+      "quantity_g": 250,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 15,
+    "fields": {
+      "recipe": 6,
+      "ingredient": 7,
+      "quantity_g": 100,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 16,
+    "fields": {
+      "recipe": 6,
+      "ingredient": 44,
+      "quantity_g": 10,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 17,
+    "fields": {
+      "recipe": 7,
+      "ingredient": 12,
+      "quantity_g": 100,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 18,
+    "fields": {
+      "recipe": 7,
+      "ingredient": 39,
+      "quantity_g": 100,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 19,
+    "fields": {
+      "recipe": 7,
+      "ingredient": 24,
+      "quantity_g": 50,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 20,
+    "fields": {
+      "recipe": 7,
+      "ingredient": 25,
+      "quantity_g": 50,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 21,
+    "fields": {
+      "recipe": 7,
+      "ingredient": 45,
+      "quantity_g": 10,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 22,
+    "fields": {
+      "recipe": 8,
+      "ingredient": 10,
+      "quantity_g": 150,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 23,
+    "fields": {
+      "recipe": 8,
+      "ingredient": 23,
+      "quantity_g": 80,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 24,
+    "fields": {
+      "recipe": 8,
+      "ingredient": 45,
+      "quantity_g": 5,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 25,
+    "fields": {
+      "recipe": 9,
+      "ingredient": 49,
+      "quantity_g": 150,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 26,
+    "fields": {
+      "recipe": 9,
+      "ingredient": 1,
+      "quantity_g": 150,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 27,
+    "fields": {
+      "recipe": 9,
+      "ingredient": 22,
+      "quantity_g": 60,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 28,
+    "fields": {
+      "recipe": 10,
+      "ingredient": 15,
+      "quantity_g": 120,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 29,
+    "fields": {
+      "recipe": 10,
+      "ingredient": 19,
+      "quantity_g": 100,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 30,
+    "fields": {
+      "recipe": 10,
+      "ingredient": 24,
+      "quantity_g": 80,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 31,
+    "fields": {
+      "recipe": 11,
+      "ingredient": 20,
+      "quantity_g": 150,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 32,
+    "fields": {
+      "recipe": 11,
+      "ingredient": 28,
+      "quantity_g": 100,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 33,
+    "fields": {
+      "recipe": 11,
+      "ingredient": 26,
+      "quantity_g": 50,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 34,
+    "fields": {
+      "recipe": 11,
+      "ingredient": 45,
+      "quantity_g": 5,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 35,
+    "fields": {
+      "recipe": 12,
+      "ingredient": 5,
+      "quantity_g": 180,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 36,
+    "fields": {
+      "recipe": 12,
+      "ingredient": 14,
+      "quantity_g": 150,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 37,
+    "fields": {
+      "recipe": 12,
+      "ingredient": 3,
+      "quantity_g": 100,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 38,
+    "fields": {
+      "recipe": 13,
+      "ingredient": 21,
+      "quantity_g": 150,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 39,
+    "fields": {
+      "recipe": 13,
+      "ingredient": 26,
+      "quantity_g": 60,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 40,
+    "fields": {
+      "recipe": 13,
+      "ingredient": 3,
+      "quantity_g": 80,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 41,
+    "fields": {
+      "recipe": 14,
+      "ingredient": 16,
+      "quantity_g": 150,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 42,
+    "fields": {
+      "recipe": 14,
+      "ingredient": 13,
+      "quantity_g": 150,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 43,
+    "fields": {
+      "recipe": 14,
+      "ingredient": 22,
+      "quantity_g": 60,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 44,
+    "fields": {
+      "recipe": 15,
+      "ingredient": 35,
+      "quantity_g": 150,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 45,
+    "fields": {
+      "recipe": 15,
+      "ingredient": 29,
+      "quantity_g": 80,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 46,
+    "fields": {
+      "recipe": 15,
+      "ingredient": 42,
+      "quantity_g": 15,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 47,
+    "fields": {
+      "recipe": 16,
+      "ingredient": 7,
+      "quantity_g": 100,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 48,
+    "fields": {
+      "recipe": 16,
+      "ingredient": 46,
+      "quantity_g": 20,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 49,
+    "fields": {
+      "recipe": 16,
+      "ingredient": 9,
+      "quantity_g": 200,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 50,
+    "fields": {
+      "recipe": 17,
+      "ingredient": 39,
+      "quantity_g": 150,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 51,
+    "fields": {
+      "recipe": 17,
+      "ingredient": 45,
+      "quantity_g": 15,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 52,
+    "fields": {
+      "recipe": 17,
+      "ingredient": 23,
+      "quantity_g": 50,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 53,
+    "fields": {
+      "recipe": 17,
+      "ingredient": 25,
+      "quantity_g": 50,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 54,
+    "fields": {
+      "recipe": 18,
+      "ingredient": 43,
+      "quantity_g": 20,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 55,
+    "fields": {
+      "recipe": 18,
+      "ingredient": 42,
+      "quantity_g": 20,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 56,
+    "fields": {
+      "recipe": 18,
+      "ingredient": 31,
+      "quantity_g": 50,
+      "created_at": "2026-07-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "recipes.recipeingredient",
+    "pk": 57,
+    "fields": {
+      "recipe": 18,
+      "ingredient": 6,
+      "quantity_g": 80,
+      "created_at": "2026-07-06T00:00:00Z"
     }
   }
 ]

@@ -1,0 +1,338 @@
+[
+  {
+    "model": "plans.dailyplan",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "name": "Plan Balanceado Clásico",
+      "date": "2026-07-06",
+      "description": "Día equilibrado con proteína, carbohidratos y vegetales en cada comida",
+      "created_at": "2026-07-06T12:00:00Z",
+      "updated_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.dailyplan",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "name": "Plan Vegano",
+      "date": "2026-07-07",
+      "description": "Día 100% basado en plantas, sin ingredientes de origen animal",
+      "created_at": "2026-07-06T12:00:00Z",
+      "updated_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.dailyplan",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "name": "Plan Sin Gluten",
+      "date": "2026-07-08",
+      "description": "Día apto para personas con intolerancia o sensibilidad al gluten",
+      "created_at": "2026-07-06T12:00:00Z",
+      "updated_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.dailyplan",
+    "pk": 4,
+    "fields": {
+      "user": 1,
+      "name": "Plan Alto en Proteína",
+      "date": "2026-07-09",
+      "description": "Día enfocado en el consumo elevado de proteína magra",
+      "created_at": "2026-07-06T12:00:00Z",
+      "updated_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.dailyplan",
+    "pk": 5,
+    "fields": {
+      "user": 1,
+      "name": "Plan Bajo en Carbohidratos",
+      "date": "2026-07-10",
+      "description": "Día con reducción de carbohidratos, ideal para control de peso",
+      "created_at": "2026-07-06T12:00:00Z",
+      "updated_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.dailyplan",
+    "pk": 6,
+    "fields": {
+      "user": 1,
+      "name": "Plan Ligero y Rápido",
+      "date": "2026-07-11",
+      "description": "Día con comidas sencillas y rápidas de preparar",
+      "created_at": "2026-07-06T12:00:00Z",
+      "updated_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 1,
+    "fields": {
+      "daily_plan": 1,
+      "meal_type": "breakfast",
+      "name": null,
+      "recipe": 3,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 2,
+    "fields": {
+      "daily_plan": 1,
+      "meal_type": "lunch",
+      "name": null,
+      "recipe": 1,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 3,
+    "fields": {
+      "daily_plan": 1,
+      "meal_type": "dinner",
+      "name": null,
+      "recipe": 2,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 4,
+    "fields": {
+      "daily_plan": 1,
+      "meal_type": "snack",
+      "name": null,
+      "recipe": 18,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 5,
+    "fields": {
+      "daily_plan": 2,
+      "meal_type": "breakfast",
+      "name": null,
+      "recipe": 6,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 6,
+    "fields": {
+      "daily_plan": 2,
+      "meal_type": "lunch",
+      "name": null,
+      "recipe": 7,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 7,
+    "fields": {
+      "daily_plan": 2,
+      "meal_type": "dinner",
+      "name": null,
+      "recipe": 13,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 8,
+    "fields": {
+      "daily_plan": 2,
+      "meal_type": "snack",
+      "name": null,
+      "recipe": 17,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 9,
+    "fields": {
+      "daily_plan": 3,
+      "meal_type": "breakfast",
+      "name": null,
+      "recipe": 6,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 10,
+    "fields": {
+      "daily_plan": 3,
+      "meal_type": "lunch",
+      "name": null,
+      "recipe": 8,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 11,
+    "fields": {
+      "daily_plan": 3,
+      "meal_type": "dinner",
+      "name": null,
+      "recipe": 11,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 12,
+    "fields": {
+      "daily_plan": 3,
+      "meal_type": "snack",
+      "name": null,
+      "recipe": 15,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 13,
+    "fields": {
+      "daily_plan": 4,
+      "meal_type": "breakfast",
+      "name": null,
+      "recipe": 3,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 14,
+    "fields": {
+      "daily_plan": 4,
+      "meal_type": "lunch",
+      "name": null,
+      "recipe": 9,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 15,
+    "fields": {
+      "daily_plan": 4,
+      "meal_type": "dinner",
+      "name": null,
+      "recipe": 14,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 16,
+    "fields": {
+      "daily_plan": 4,
+      "meal_type": "snack",
+      "name": null,
+      "recipe": 15,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 17,
+    "fields": {
+      "daily_plan": 5,
+      "meal_type": "breakfast",
+      "name": null,
+      "recipe": 5,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 18,
+    "fields": {
+      "daily_plan": 5,
+      "meal_type": "lunch",
+      "name": null,
+      "recipe": 2,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 19,
+    "fields": {
+      "daily_plan": 5,
+      "meal_type": "dinner",
+      "name": null,
+      "recipe": 11,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 20,
+    "fields": {
+      "daily_plan": 5,
+      "meal_type": "snack",
+      "name": null,
+      "recipe": 18,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 21,
+    "fields": {
+      "daily_plan": 6,
+      "meal_type": "breakfast",
+      "name": null,
+      "recipe": 4,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 22,
+    "fields": {
+      "daily_plan": 6,
+      "meal_type": "lunch",
+      "name": null,
+      "recipe": 10,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 23,
+    "fields": {
+      "daily_plan": 6,
+      "meal_type": "dinner",
+      "name": null,
+      "recipe": 12,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  },
+  {
+    "model": "plans.planmeal",
+    "pk": 24,
+    "fields": {
+      "daily_plan": 6,
+      "meal_type": "snack",
+      "name": null,
+      "recipe": 16,
+      "created_at": "2026-07-06T12:00:00Z"
+    }
+  }
+]
