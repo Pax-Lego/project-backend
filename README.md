@@ -1,4 +1,4 @@
-# Pax-Lego - Backend
+# Pax-Saporis - Backend
 
 Backend para aplicación de tracking de calorías construido con Django, DRF y PostgreSQL.
 
