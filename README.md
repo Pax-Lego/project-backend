@@ -1,4 +1,4 @@
-# Calorie Tracker - Backend
+# Pax-Lego - Backend
 
 Backend para aplicación de tracking de calorías construido con Django, DRF y PostgreSQL.
 
