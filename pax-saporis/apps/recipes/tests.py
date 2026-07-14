@@ -3,11 +3,13 @@ from unittest.mock import MagicMock, patch
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import Http404
-from django.test import SimpleTestCase
+from django.test import SimpleTestCase, TestCase
 from rest_framework import serializers, status
-from rest_framework.test import APIRequestFactory, force_authenticate
+from rest_framework.test import APIClient, APIRequestFactory, force_authenticate
 
+from apps.accounts.models import CustomUser
 from apps.ingredients.views import IngredientViewSet
+from apps.recipes.models import Recipe
 from apps.recipes.views import RecipeViewSet
 
 
@@ -408,7 +410,7 @@ class RecipeDetailViewUnitTests(SimpleTestCase):
                 {
                     "id": 1,
                     "ingredient_name": "Banana",
-                    "quantity_g": 100.0,
+                    "quantity": 100.0,
                     "calories": 89.0,
                     "protein": 1.09,
                     "carbs": 23.0,
@@ -417,7 +419,7 @@ class RecipeDetailViewUnitTests(SimpleTestCase):
                 {
                     "id": 2,
                     "ingredient_name": "Milk",
-                    "quantity_g": 200.0,
+                    "quantity": 200.0,
                     "calories": 134.0,
                     "protein": 6.8,
                     "carbs": 9.8,
@@ -646,3 +648,30 @@ class RecipeRemoveIngredientViewUnitTests(SimpleTestCase):
             response = self.view(request, pk=1)
 
         self.assertEqual(response.status_code, status.HTTP_415_UNSUPPORTED_MEDIA_TYPE)
+
+
+class TestDefaultRecipeEditableView(TestCase):
+    def setUp(self):
+        self.user = CustomUser.objects.create_user(
+            username="editdefaultrecipe",
+            email="editdefaultrecipe@example.com",
+            password="testpass123",
+        )
+        self.client = APIClient()
+        self.client.force_authenticate(user=self.user)
+        self.recipe = Recipe.objects.create(name="Default Salad", is_default=True)
+
+    def test_update_default_recipe_succeeds(self):
+        response = self.client.patch(
+            f"/api/recipes/{self.recipe.id}/",
+            {"description": "Updated description"},
+            format="json",
+        )
+        self.assertEqual(response.status_code, 200)
+        self.recipe.refresh_from_db()
+        self.assertEqual(self.recipe.description, "Updated description")
+
+    def test_delete_default_recipe_succeeds(self):
+        response = self.client.delete(f"/api/recipes/{self.recipe.id}/")
+        self.assertEqual(response.status_code, 204)
+        self.assertFalse(Recipe.objects.filter(id=self.recipe.id).exists())

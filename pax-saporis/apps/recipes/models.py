@@ -47,27 +47,37 @@ class RecipeIngredient(models.Model):
         Recipe, on_delete=models.CASCADE, related_name="ingredients_rel"
     )
     ingredient = models.ForeignKey(Ingredient, on_delete=models.CASCADE)
-    quantity_g = models.FloatField(help_text="Cantidad en gramos")
+    quantity = models.FloatField(
+        help_text="Cantidad en gramos (ingredientes por peso) o en unidades (ingredientes por unidad)"
+    )
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         unique_together = ("recipe", "ingredient")
 
     def __str__(self):
-        return f"{self.ingredient.name} - {self.quantity_g}g"
+        return f"{self.ingredient.name} - {self.quantity}"
 
     @property
     def calories(self):
-        return (self.ingredient.calories_per_100g / 100) * self.quantity_g
+        if self.ingredient.measurement_type == Ingredient.MeasurementType.UNIT:
+            return (self.ingredient.calories_per_unit or 0) * self.quantity
+        return (self.ingredient.calories_per_100g / 100) * self.quantity
 
     @property
     def protein(self):
-        return (self.ingredient.protein_g / 100) * self.quantity_g
+        if self.ingredient.measurement_type == Ingredient.MeasurementType.UNIT:
+            return (self.ingredient.protein_per_unit or 0) * self.quantity
+        return (self.ingredient.protein_g / 100) * self.quantity
 
     @property
     def carbs(self):
-        return (self.ingredient.carbs_g / 100) * self.quantity_g
+        if self.ingredient.measurement_type == Ingredient.MeasurementType.UNIT:
+            return (self.ingredient.carbs_per_unit or 0) * self.quantity
+        return (self.ingredient.carbs_g / 100) * self.quantity
 
     @property
     def fat(self):
-        return (self.ingredient.fat_g / 100) * self.quantity_g
+        if self.ingredient.measurement_type == Ingredient.MeasurementType.UNIT:
+            return (self.ingredient.fat_per_unit or 0) * self.quantity
+        return (self.ingredient.fat_g / 100) * self.quantity

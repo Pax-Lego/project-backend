@@ -38,7 +38,7 @@ class RecipeIngredientAdmin(admin.ModelAdmin):
     list_display = [
         "recipe",
         "ingredient",
-        "quantity_g",
+        "quantity",
         "calories",
         "protein",
         "carbs",

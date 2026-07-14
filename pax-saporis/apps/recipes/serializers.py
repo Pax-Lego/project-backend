@@ -6,6 +6,10 @@ from apps.recipes.models import Recipe, RecipeIngredient
 class RecipeIngredientSerializer(serializers.ModelSerializer):
     ingredient_name = serializers.CharField(source="ingredient.name", read_only=True)
     ingredient_id = serializers.IntegerField(source="ingredient.id", read_only=True)
+    measurement_type = serializers.CharField(
+        source="ingredient.measurement_type", read_only=True
+    )
+    unit_label = serializers.CharField(source="ingredient.unit_label", read_only=True)
     calories = serializers.FloatField(read_only=True)
     protein = serializers.FloatField(read_only=True)
     carbs = serializers.FloatField(read_only=True)
@@ -17,7 +21,9 @@ class RecipeIngredientSerializer(serializers.ModelSerializer):
             "id",
             "ingredient_id",
             "ingredient_name",
-            "quantity_g",
+            "measurement_type",
+            "unit_label",
+            "quantity",
             "calories",
             "protein",
             "carbs",

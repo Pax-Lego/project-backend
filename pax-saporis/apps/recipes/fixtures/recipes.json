@@ -221,7 +221,7 @@
     "fields": {
       "recipe": 1,
       "ingredient": 1,
-      "quantity_g": 150,
+      "quantity": 150,
       "created_at": "2026-06-08T00:00:00Z"
     }
   },
@@ -231,7 +231,7 @@
     "fields": {
       "recipe": 1,
       "ingredient": 2,
-      "quantity_g": 150,
+      "quantity": 150,
       "created_at": "2026-06-08T00:00:00Z"
     }
   },
@@ -241,7 +241,7 @@
     "fields": {
       "recipe": 1,
       "ingredient": 3,
-      "quantity_g": 100,
+      "quantity": 100,
       "created_at": "2026-06-08T00:00:00Z"
     }
   },
@@ -251,7 +251,7 @@
     "fields": {
       "recipe": 2,
       "ingredient": 5,
-      "quantity_g": 180,
+      "quantity": 180,
       "created_at": "2026-06-08T00:00:00Z"
     }
   },
@@ -261,7 +261,7 @@
     "fields": {
       "recipe": 2,
       "ingredient": 3,
-      "quantity_g": 150,
+      "quantity": 150,
       "created_at": "2026-06-08T00:00:00Z"
     }
   },
@@ -271,7 +271,7 @@
     "fields": {
       "recipe": 3,
       "ingredient": 4,
-      "quantity_g": 100,
+      "quantity": 100,
       "created_at": "2026-06-08T00:00:00Z"
     }
   },
@@ -281,7 +281,7 @@
     "fields": {
       "recipe": 3,
       "ingredient": 8,
-      "quantity_g": 40,
+      "quantity": 40,
       "created_at": "2026-06-08T00:00:00Z"
     }
   },
@@ -291,7 +291,7 @@
     "fields": {
       "recipe": 4,
       "ingredient": 11,
-      "quantity_g": 60,
+      "quantity": 60,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -301,7 +301,7 @@
     "fields": {
       "recipe": 4,
       "ingredient": 7,
-      "quantity_g": 100,
+      "quantity": 100,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -311,7 +311,7 @@
     "fields": {
       "recipe": 4,
       "ingredient": 47,
-      "quantity_g": 15,
+      "quantity": 15,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -321,7 +321,7 @@
     "fields": {
       "recipe": 5,
       "ingredient": 8,
-      "quantity_g": 60,
+      "quantity": 60,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -331,7 +331,7 @@
     "fields": {
       "recipe": 5,
       "ingredient": 34,
-      "quantity_g": 80,
+      "quantity": 80,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -341,7 +341,7 @@
     "fields": {
       "recipe": 5,
       "ingredient": 4,
-      "quantity_g": 100,
+      "quantity": 100,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -351,7 +351,7 @@
     "fields": {
       "recipe": 6,
       "ingredient": 37,
-      "quantity_g": 250,
+      "quantity": 250,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -361,7 +361,7 @@
     "fields": {
       "recipe": 6,
       "ingredient": 7,
-      "quantity_g": 100,
+      "quantity": 100,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -371,7 +371,7 @@
     "fields": {
       "recipe": 6,
       "ingredient": 44,
-      "quantity_g": 10,
+      "quantity": 10,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -381,7 +381,7 @@
     "fields": {
       "recipe": 7,
       "ingredient": 12,
-      "quantity_g": 100,
+      "quantity": 100,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -391,7 +391,7 @@
     "fields": {
       "recipe": 7,
       "ingredient": 39,
-      "quantity_g": 100,
+      "quantity": 100,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -401,7 +401,7 @@
     "fields": {
       "recipe": 7,
       "ingredient": 24,
-      "quantity_g": 50,
+      "quantity": 50,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -411,7 +411,7 @@
     "fields": {
       "recipe": 7,
       "ingredient": 25,
-      "quantity_g": 50,
+      "quantity": 50,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -421,7 +421,7 @@
     "fields": {
       "recipe": 7,
       "ingredient": 45,
-      "quantity_g": 10,
+      "quantity": 10,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -431,7 +431,7 @@
     "fields": {
       "recipe": 8,
       "ingredient": 10,
-      "quantity_g": 150,
+      "quantity": 150,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -441,7 +441,7 @@
     "fields": {
       "recipe": 8,
       "ingredient": 23,
-      "quantity_g": 80,
+      "quantity": 80,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -451,7 +451,7 @@
     "fields": {
       "recipe": 8,
       "ingredient": 45,
-      "quantity_g": 5,
+      "quantity": 5,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -461,7 +461,7 @@
     "fields": {
       "recipe": 9,
       "ingredient": 49,
-      "quantity_g": 150,
+      "quantity": 150,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -471,7 +471,7 @@
     "fields": {
       "recipe": 9,
       "ingredient": 1,
-      "quantity_g": 150,
+      "quantity": 150,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -481,7 +481,7 @@
     "fields": {
       "recipe": 9,
       "ingredient": 22,
-      "quantity_g": 60,
+      "quantity": 60,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -491,7 +491,7 @@
     "fields": {
       "recipe": 10,
       "ingredient": 15,
-      "quantity_g": 120,
+      "quantity": 120,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -501,7 +501,7 @@
     "fields": {
       "recipe": 10,
       "ingredient": 19,
-      "quantity_g": 100,
+      "quantity": 100,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -511,7 +511,7 @@
     "fields": {
       "recipe": 10,
       "ingredient": 24,
-      "quantity_g": 80,
+      "quantity": 80,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -521,7 +521,7 @@
     "fields": {
       "recipe": 11,
       "ingredient": 20,
-      "quantity_g": 150,
+      "quantity": 150,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -531,7 +531,7 @@
     "fields": {
       "recipe": 11,
       "ingredient": 28,
-      "quantity_g": 100,
+      "quantity": 100,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -541,7 +541,7 @@
     "fields": {
       "recipe": 11,
       "ingredient": 26,
-      "quantity_g": 50,
+      "quantity": 50,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -551,7 +551,7 @@
     "fields": {
       "recipe": 11,
       "ingredient": 45,
-      "quantity_g": 5,
+      "quantity": 5,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -561,7 +561,7 @@
     "fields": {
       "recipe": 12,
       "ingredient": 5,
-      "quantity_g": 180,
+      "quantity": 180,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -571,7 +571,7 @@
     "fields": {
       "recipe": 12,
       "ingredient": 14,
-      "quantity_g": 150,
+      "quantity": 150,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -581,7 +581,7 @@
     "fields": {
       "recipe": 12,
       "ingredient": 3,
-      "quantity_g": 100,
+      "quantity": 100,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -591,7 +591,7 @@
     "fields": {
       "recipe": 13,
       "ingredient": 21,
-      "quantity_g": 150,
+      "quantity": 150,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -601,7 +601,7 @@
     "fields": {
       "recipe": 13,
       "ingredient": 26,
-      "quantity_g": 60,
+      "quantity": 60,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -611,7 +611,7 @@
     "fields": {
       "recipe": 13,
       "ingredient": 3,
-      "quantity_g": 80,
+      "quantity": 80,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -621,7 +621,7 @@
     "fields": {
       "recipe": 14,
       "ingredient": 16,
-      "quantity_g": 150,
+      "quantity": 150,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -631,7 +631,7 @@
     "fields": {
       "recipe": 14,
       "ingredient": 13,
-      "quantity_g": 150,
+      "quantity": 150,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -641,7 +641,7 @@
     "fields": {
       "recipe": 14,
       "ingredient": 22,
-      "quantity_g": 60,
+      "quantity": 60,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -651,7 +651,7 @@
     "fields": {
       "recipe": 15,
       "ingredient": 35,
-      "quantity_g": 150,
+      "quantity": 150,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -661,7 +661,7 @@
     "fields": {
       "recipe": 15,
       "ingredient": 29,
-      "quantity_g": 80,
+      "quantity": 80,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -671,7 +671,7 @@
     "fields": {
       "recipe": 15,
       "ingredient": 42,
-      "quantity_g": 15,
+      "quantity": 15,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -681,7 +681,7 @@
     "fields": {
       "recipe": 16,
       "ingredient": 7,
-      "quantity_g": 100,
+      "quantity": 100,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -691,7 +691,7 @@
     "fields": {
       "recipe": 16,
       "ingredient": 46,
-      "quantity_g": 20,
+      "quantity": 20,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -701,7 +701,7 @@
     "fields": {
       "recipe": 16,
       "ingredient": 9,
-      "quantity_g": 200,
+      "quantity": 200,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -711,7 +711,7 @@
     "fields": {
       "recipe": 17,
       "ingredient": 39,
-      "quantity_g": 150,
+      "quantity": 150,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -721,7 +721,7 @@
     "fields": {
       "recipe": 17,
       "ingredient": 45,
-      "quantity_g": 15,
+      "quantity": 15,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -731,7 +731,7 @@
     "fields": {
       "recipe": 17,
       "ingredient": 23,
-      "quantity_g": 50,
+      "quantity": 50,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -741,7 +741,7 @@
     "fields": {
       "recipe": 17,
       "ingredient": 25,
-      "quantity_g": 50,
+      "quantity": 50,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -751,7 +751,7 @@
     "fields": {
       "recipe": 18,
       "ingredient": 43,
-      "quantity_g": 20,
+      "quantity": 20,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -761,7 +761,7 @@
     "fields": {
       "recipe": 18,
       "ingredient": 42,
-      "quantity_g": 20,
+      "quantity": 20,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -771,7 +771,7 @@
     "fields": {
       "recipe": 18,
       "ingredient": 31,
-      "quantity_g": 50,
+      "quantity": 50,
       "created_at": "2026-07-06T00:00:00Z"
     }
   },
@@ -781,7 +781,7 @@
     "fields": {
       "recipe": 18,
       "ingredient": 6,
-      "quantity_g": 80,
+      "quantity": 80,
       "created_at": "2026-07-06T00:00:00Z"
     }
   }
