@@ -13,6 +13,7 @@ class WeightEntrySerializer(serializers.ModelSerializer):
 class UserProfileSerializer(serializers.ModelSerializer):
     age = serializers.IntegerField(read_only=True)
     current_weight = serializers.FloatField(read_only=True)
+    bmr = serializers.FloatField(read_only=True)
     tdee = serializers.FloatField(read_only=True)
     recommended_calories = serializers.FloatField(read_only=True)
     recommended_macros = serializers.DictField(read_only=True)
@@ -30,6 +31,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
             "goal",
             "dietary_restrictions",
             "current_weight",
+            "bmr",
             "tdee",
             "recommended_calories",
             "recommended_macros",
@@ -43,6 +45,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
             "updated_at",
             "age",
             "current_weight",
+            "bmr",
             "tdee",
             "recommended_calories",
             "recommended_macros",

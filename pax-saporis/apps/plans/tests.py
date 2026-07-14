@@ -1,5 +1,14 @@
 import unittest
+from datetime import date, timedelta
 from unittest.mock import MagicMock, PropertyMock, patch
+
+from django.test import TestCase
+from rest_framework.test import APIClient
+
+from apps.accounts.models import CustomUser
+from apps.ingredients.models import Ingredient
+from apps.plans.models import DailyPlan, PlanMeal
+from apps.recipes.models import Recipe, RecipeIngredient
 
 
 def make_mock_recipe(calories, protein, carbs, fat):
@@ -145,3 +154,96 @@ class TestDailyPlanMixedMeals(unittest.TestCase):
 
             self.assertAlmostEqual(plan.total_calories, 450.0)
             self.assertAlmostEqual(plan.total_protein, 35.0)
+
+
+class DailyPlanHistoryAndDateFilterTests(TestCase):
+    def setUp(self):
+        self.user = CustomUser.objects.create_user(
+            username="historyuser", email="history@example.com", password="testpass123"
+        )
+        self.client = APIClient()
+        self.client.force_authenticate(user=self.user)
+
+        self.ingredient = Ingredient.objects.create(
+            user=self.user,
+            name="Chicken breast",
+            calories_per_100g=165,
+            protein_g=31,
+            carbs_g=0,
+            fat_g=3.6,
+        )
+        self.recipe = Recipe.objects.create(user=self.user, name="Grilled chicken")
+        RecipeIngredient.objects.create(
+            recipe=self.recipe, ingredient=self.ingredient, quantity=200
+        )
+
+        self.today = date.today()
+        self.yesterday = self.today - timedelta(days=1)
+        self.old_date = self.today - timedelta(days=40)
+
+        self.plan_today = DailyPlan.objects.create(
+            user=self.user, name="Today", date=self.today
+        )
+        PlanMeal.objects.create(
+            daily_plan=self.plan_today, meal_type="lunch", recipe=self.recipe
+        )
+
+        self.plan_yesterday = DailyPlan.objects.create(
+            user=self.user, name="Yesterday", date=self.yesterday
+        )
+        PlanMeal.objects.create(
+            daily_plan=self.plan_yesterday, meal_type="dinner", recipe=self.recipe
+        )
+
+        self.plan_old = DailyPlan.objects.create(
+            user=self.user, name="Old", date=self.old_date
+        )
+        PlanMeal.objects.create(
+            daily_plan=self.plan_old, meal_type="breakfast", recipe=self.recipe
+        )
+
+    def test_date_filter_returns_only_matching_plan(self):
+        response = self.client.get("/api/plans/", {"date": self.today.isoformat()})
+        self.assertEqual(response.status_code, 200)
+        dates = [item["date"] for item in response.json()]
+        self.assertEqual(dates, [self.today.isoformat()])
+
+    def test_date_filter_no_match_returns_empty(self):
+        far_future = (self.today + timedelta(days=365)).isoformat()
+        response = self.client.get("/api/plans/", {"date": far_future})
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json(), [])
+
+    def test_history_default_30_days_excludes_old_plan(self):
+        response = self.client.get("/api/plans/history/")
+        self.assertEqual(response.status_code, 200)
+        dates = [item["date"] for item in response.json()]
+        self.assertIn(self.today.isoformat(), dates)
+        self.assertIn(self.yesterday.isoformat(), dates)
+        self.assertNotIn(self.old_date.isoformat(), dates)
+
+    def test_history_totals_match_recipe_nutrition(self):
+        response = self.client.get("/api/plans/history/")
+        data = response.json()
+        today_entry = next(
+            item for item in data if item["date"] == self.today.isoformat()
+        )
+        # 200g of chicken breast (165 kcal / 31g protein / 3.6g fat per 100g)
+        self.assertAlmostEqual(today_entry["total_calories"], 330.0)
+        self.assertAlmostEqual(today_entry["total_protein"], 62.0)
+        self.assertAlmostEqual(today_entry["total_fat"], 7.2)
+
+    def test_history_respects_days_param(self):
+        response = self.client.get("/api/plans/history/", {"days": 45})
+        dates = [item["date"] for item in response.json()]
+        self.assertIn(self.old_date.isoformat(), dates)
+
+    def test_history_only_returns_own_plans(self):
+        other_user = CustomUser.objects.create_user(
+            username="otheruser", email="other@example.com", password="testpass123"
+        )
+        DailyPlan.objects.create(user=other_user, name="Other", date=self.today)
+
+        response = self.client.get("/api/plans/history/")
+        data = response.json()
+        self.assertEqual(len(data), 2)

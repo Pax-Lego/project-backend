@@ -1,3 +1,5 @@
+from datetime import date, timedelta
+
 from django.db.models import Q
 from rest_framework import status, viewsets
 from rest_framework.decorators import action
@@ -17,7 +19,11 @@ class DailyPlanViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        return DailyPlan.objects.filter(user=self.request.user)
+        queryset = DailyPlan.objects.filter(user=self.request.user)
+        date_param = self.request.query_params.get("date")
+        if date_param:
+            queryset = queryset.filter(date=date_param)
+        return queryset
 
     def get_serializer_class(self):
         if self.action == "retrieve":
@@ -26,6 +32,26 @@ class DailyPlanViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+
+    @action(detail=False, methods=["get"])
+    def history(self, request):
+        try:
+            days = int(request.query_params.get("days", 30))
+        except ValueError:
+            days = 30
+        start = date.today() - timedelta(days=days - 1)
+        plans = self.get_queryset().filter(date__gte=start).order_by("date")
+        data = [
+            {
+                "date": plan.date,
+                "total_calories": plan.total_calories,
+                "total_protein": plan.total_protein,
+                "total_carbs": plan.total_carbs,
+                "total_fat": plan.total_fat,
+            }
+            for plan in plans
+        ]
+        return Response(data)
 
     @action(detail=True, methods=["get"])
     def nutritional_summary(self, request, pk=None):
