@@ -28,20 +28,9 @@ class RecipeViewSet(viewsets.ModelViewSet):
         serializer.save(user=self.request.user, is_default=False)
 
     def perform_update(self, serializer):
-        recipe = self.get_object()
-        if recipe.is_default:
-            return Response(
-                {"error": "No puedes editar recetas predefinidas"},
-                status=status.HTTP_403_FORBIDDEN,
-            )
         serializer.save()
 
     def perform_destroy(self, instance):
-        if instance.is_default:
-            return Response(
-                {"error": "No puedes eliminar recetas predefinidas"},
-                status=status.HTTP_403_FORBIDDEN,
-            )
         instance.delete()
 
     @action(detail=False, methods=["get"])
@@ -60,11 +49,11 @@ class RecipeViewSet(viewsets.ModelViewSet):
     def add_ingredient(self, request, pk=None):
         recipe = self.get_object()
         ingredient_id = request.data.get("ingredient_id")
-        quantity_g = request.data.get("quantity_g")
+        quantity = request.data.get("quantity")
 
-        if not ingredient_id or not quantity_g:
+        if not ingredient_id or not quantity:
             return Response(
-                {"error": "ingredient_id y quantity_g son requeridos"},
+                {"error": "ingredient_id y quantity son requeridos"},
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
@@ -79,11 +68,11 @@ class RecipeViewSet(viewsets.ModelViewSet):
         recipe_ingredient, created = RecipeIngredient.objects.get_or_create(
             recipe=recipe,
             ingredient=ingredient,
-            defaults={"quantity_g": quantity_g},
+            defaults={"quantity": quantity},
         )
 
         if not created:
-            recipe_ingredient.quantity_g = quantity_g
+            recipe_ingredient.quantity = quantity
             recipe_ingredient.save()
 
         return Response(RecipeIngredientSerializer(recipe_ingredient).data)

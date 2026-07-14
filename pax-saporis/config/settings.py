@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "apps.plans",
     "apps.profiles",
     "apps.favorites",
+    "apps.lists",
 ]
 
 MIDDLEWARE = [

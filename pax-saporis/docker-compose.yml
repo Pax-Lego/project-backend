@@ -19,7 +19,7 @@ services:
   web:
     build: .
     container_name: calorie_tracker_web
-    command: sh -c "python manage.py migrate && python manage.py loaddata apps/accounts/fixtures/accounts.json apps/ingredients/fixtures/ingredients.json apps/recipes/fixtures/recipes.json apps/plans/fixtures/plans.json && python manage.py runserver 0.0.0.0:8000"
+    command: sh -c "python manage.py migrate && python manage.py loaddata apps/accounts/fixtures/accounts.json apps/ingredients/fixtures/ingredients.json apps/recipes/fixtures/recipes.json apps/plans/fixtures/plans.json && python manage.py sync_builtin_lists && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/app
     ports:
